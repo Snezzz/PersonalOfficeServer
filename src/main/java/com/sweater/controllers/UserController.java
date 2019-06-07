@@ -15,28 +15,36 @@ public class UserController {
     }
 
     //get
-    @CrossOrigin(origins = "http://localhost:")
-    @GetMapping("/user/{login}")
-    public Student getFilterCourseFees(@PathVariable("login")String login) {
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/login/{login}")
+    public Student getUser(@PathVariable("login")String login) {
         return userService.getUserByLogin(login);
     }
 
+    //get by id
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/id/{id}")
+    public Student getUserById(@PathVariable("id")Integer id) {
+        return userService.getUserById(id);
+    }
+
+
     //add
-    @CrossOrigin(origins = "http://localhost:")
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/user")
     public void addUser(@RequestBody Student student) {
         userService.addUser(student);
     }
 
     //delete by id
-    @CrossOrigin(origins = "http://localhost:")
+    @CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping("/user/{id}")
     public void deleteUserById(@PathVariable int id){
         userService.deleteById(id);
     }
 
     //update
-    @CrossOrigin(origins = "http://localhost")
+    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/user")
     public void updateUser(@RequestBody Student student)
     {

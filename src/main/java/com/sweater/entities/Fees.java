@@ -15,7 +15,7 @@ public class Fees {
     int semester;
     int course;
     String fee;
-    int student_id;
+    int studentId;
 
     Fees(){
 
@@ -78,11 +78,11 @@ public class Fees {
     }
 
     public int getStudent_id() {
-        return student_id;
+        return studentId;
     }
 
     public void setStudent_id(int student_id) {
-        this.student_id = student_id;
+        this.studentId = student_id;
     }
 
     public Fees(String subject, String lecturer, String type, int semester, int course, String fee, int student_id) {
@@ -92,6 +92,6 @@ public class Fees {
         this.semester = semester;
         this.course = course;
         this.fee = fee;
-        this.student_id = student_id;
+        this.studentId = student_id;
     }
 }

@@ -27,5 +27,8 @@ public class UserService {
     public Student getUserByLogin(String login){
         return userRepository.findByLogin(login);
     }
+    public Student getUserById(Integer id){
+        return userRepository.findById(id).get();
+    }
 
 }

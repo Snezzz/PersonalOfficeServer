@@ -1,7 +1,6 @@
 package com.sweater.entities;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,18 +12,17 @@ public class Tasks {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    @NotNull
-    String Task;
-    @NotNull
-    Date date;
-    Date deadline;
+    private String task;
+    private Date date;
+    private Date deadline;
+    int student_id;
 
     public String getDate() {
         return String.valueOf(date).substring(0,19);
     }
 
     public void setDate(String date) {
-
+            System.out.println("ТУТАААААААААААА");
         try {
             this.date = new SimpleDateFormat("dd.MM.yyyy").parse(date);
         } catch (ParseException e) {
@@ -53,10 +51,19 @@ public class Tasks {
 
     }
 
-    public Tasks(String task, Date date, Date deadline) {
-        Task = task;
+    public Tasks(String task, Date date, Date deadline, int student_id) {
+        this.task = task;
         this.date = date;
         this.deadline = deadline;
+        this.student_id = student_id;
+    }
+
+    public int getStudent_id() {
+        return student_id;
+    }
+
+    public void setStudent_id(int student_id) {
+        this.student_id = student_id;
     }
 
     public int getId() {
@@ -68,11 +75,11 @@ public class Tasks {
     }
 
     public String getTask() {
-        return Task;
+        return task;
     }
 
     public void setTask(String task) {
-        Task = task;
+        this.task = task;
     }
 
 

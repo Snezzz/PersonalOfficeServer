@@ -16,21 +16,21 @@ public class TaskController {
     }
 
     //add
-    @CrossOrigin(origins = "http://localhost:")
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/task")
     public void addTask(@RequestBody Tasks task) {
         taskService.addTask(task);
     }
 
     //get all tasks
-    @CrossOrigin(origins = "http://localhost:")
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/tasks")
     public List<Tasks> getTasks() {
         return taskService.getTasks();
     }
 
     //delete by date
-    @CrossOrigin(origins = "http://localhost:")
+    @CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping("/task/{date}")
     public void deleteTaskByDate(@PathVariable Date date) {
         taskService.deleteTaskByDate(date);
