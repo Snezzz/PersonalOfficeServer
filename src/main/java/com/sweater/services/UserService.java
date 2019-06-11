@@ -5,6 +5,8 @@ import com.sweater.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     UserRepository userRepository;
@@ -29,6 +31,9 @@ public class UserService {
     }
     public Student getUserById(Integer id){
         return userRepository.findById(id).get();
+    }
+    public List<Student> getAllUsers(){
+        return userRepository.findAll();
     }
 
 }

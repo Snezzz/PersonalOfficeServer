@@ -5,6 +5,8 @@ import com.sweater.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class UserController {
     private UserService userService;
@@ -26,6 +28,13 @@ public class UserController {
     @GetMapping("/id/{id}")
     public Student getUserById(@PathVariable("id")Integer id) {
         return userService.getUserById(id);
+    }
+
+    //get by id
+    @CrossOrigin(origins = "http://localhost:3000")
+    @GetMapping("/users")
+    public List<Student> getUsers() {
+        return userService.getAllUsers();
     }
 
 

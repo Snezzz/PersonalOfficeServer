@@ -114,3 +114,9 @@ insert into FEES_TABLE values(default, 3,'отлично','Прохоров',2,3
 insert into FEES_TABLE values(default, 3,'отлично','Просолупов',2,3,'Дискретная математика','экзамен');
 
 --tasks
+insert into TASKS_TABLE values(default,'2019-05-01','2019-05-11',1,'Создать приложение для зачета');
+insert into TASKS_TABLE values(default,'2019-05-12','2019-05-12',1,'Созвониться с научным руководителем');
+insert into TASKS_TABLE values(default,'2019-05-01','2019-05-12',2,'Получить информацию о мат помощи');
+insert into TASKS_TABLE values(default,'2019-03-01','2019-05-12',2,'Создать веб-страницу');
+insert into TASKS_TABLE values(default,'2019-05-11','2019-05-11',3,'Сдать текст по английскому');
+insert into TASKS_TABLE values(default,'2019-03-10','2019-05-12',3,'Написать курсовую работу');
