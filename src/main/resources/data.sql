@@ -1,6 +1,6 @@
-insert into STUDENT_TABLE values (default,1,'ФИИТ','Петр','st040203','Алексеевич','PmdJWkCw','Лейкин','бакалавр');
-insert into STUDENT_TABLE values (default,2,'ПМИ','Евгения','st020204','Борисовна','NMWNDkwJ','Старцева','бакалавр');
-insert into STUDENT_TABLE values (default,3,'ФИИТ','Федор','st030104','Петрович','mdJSsdj','Прыжо','магистр');
+insert into STUDENT_TABLE values (default,1,'ФИИТ','Петр','st040203','','Алексеевич','PmdJWkCw','Лейкин','','бакалавр');
+insert into STUDENT_TABLE values (default,2,'ПМИ','Евгения','st020204','','Борисовна','NMWNDkwJ','Старцева','','бакалавр');
+insert into STUDENT_TABLE values (default,3,'ФИИТ','Федор','st030104','','Петрович','mdJSsdj','Прыжо','','магистр');
 
 --1 семестр
 insert into FEES_TABLE values(default, 1,'зачет','Малафеев',1,1,'Математический анализ','зачет');

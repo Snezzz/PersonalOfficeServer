@@ -18,6 +18,9 @@ public class Student {
     String type;
     String course;
     String direction;
+    String number;
+    String snils;
+
     @ManyToMany
     Set<Fees> fees;
     @ManyToMany
@@ -27,7 +30,7 @@ public class Student {
 
     }
 
-    public Student(String firstName, String sirName, String partonymic, String login, String password, String type, String course, String direction, Set<Fees> fees, Set<Tasks> tasks) {
+    public Student(String firstName, String sirName, String partonymic, String login, String password, String type, String course, String direction, String number, String snils, Set<Fees> fees, Set<Tasks> tasks) {
         this.firstName = firstName;
         this.sirName = sirName;
         this.partonymic = partonymic;
@@ -36,6 +39,8 @@ public class Student {
         this.type = type;
         this.course = course;
         this.direction = direction;
+        this.number = number;
+        this.snils = snils;
         this.fees = fees;
         this.tasks = tasks;
     }
@@ -126,5 +131,21 @@ public class Student {
 
     public void setTasks(Set<Tasks> tasks) {
         this.tasks = tasks;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getSnils() {
+        return snils;
+    }
+
+    public void setSnils(String snils) {
+        this.snils = snils;
     }
 }
