@@ -1,8 +1,6 @@
 package com.sweater.entities;
 
 import javax.persistence.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -15,14 +13,15 @@ public class Tasks {
     private String task;
     private Date date;
     private Date deadline;
+    private Integer importance;
     int student_id;
 
-    public String getDate() {
+   /* public String getDate() {
         return String.valueOf(date).substring(0,19);
     }
 
     public void setDate(String date) {
-            System.out.println("ТУТАААААААААААА");
+
         try {
             this.date = new SimpleDateFormat("dd.MM.yyyy").parse(date);
         } catch (ParseException e) {
@@ -44,18 +43,34 @@ public class Tasks {
         }
 
     }
-
+*/
 
 
     Tasks(){
 
     }
 
-    public Tasks(String task, Date date, Date deadline, int student_id) {
+    public Tasks(String task, Date date, Date deadline, Integer importance, int student_id) {
         this.task = task;
         this.date = date;
         this.deadline = deadline;
+        this.importance = importance;
         this.student_id = student_id;
+    }
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Date getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
     }
 
     public int getStudent_id() {
@@ -82,5 +97,11 @@ public class Tasks {
         this.task = task;
     }
 
+    public Integer getImportance() {
+        return importance;
+    }
 
+    public void setImportance(Integer importance) {
+        this.importance = importance;
+    }
 }

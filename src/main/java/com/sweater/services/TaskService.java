@@ -24,8 +24,8 @@ public class TaskService {
     public void deleteTask(Tasks task){
         taskRepository.delete(task);
     }
-    public void deleteTaskByDate(Date date){
-        taskRepository.deleteByDate(date);
+    public void deleteTaskById(int id){
+        taskRepository.deleteById(id);
     }
 
 }

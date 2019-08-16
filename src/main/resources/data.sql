@@ -114,9 +114,33 @@ insert into FEES_TABLE values(default, 3,'отлично','Прохоров',2,3
 insert into FEES_TABLE values(default, 3,'отлично','Просолупов',2,3,'Дискретная математика','экзамен');
 
 --tasks
-insert into TASKS_TABLE values(default,'2019-05-01','2019-05-11',1,'Создать приложение для зачета');
-insert into TASKS_TABLE values(default,'2019-05-12','2019-05-12',1,'Созвониться с научным руководителем');
-insert into TASKS_TABLE values(default,'2019-05-01','2019-05-12',2,'Получить информацию о мат помощи');
-insert into TASKS_TABLE values(default,'2019-03-01','2019-05-12',2,'Создать веб-страницу');
-insert into TASKS_TABLE values(default,'2019-05-11','2019-05-11',3,'Сдать текст по английскому');
-insert into TASKS_TABLE values(default,'2019-03-10','2019-05-12',3,'Написать курсовую работу');
+insert into TASKS_TABLE values(default,'2019-05-01','2019-05-11',2,1,'Создать приложение для зачета');
+insert into TASKS_TABLE values(default,'2019-05-12','2019-05-12',3,1,'Созвониться с научным руководителем');
+insert into TASKS_TABLE values(default,'2019-05-01','2019-05-12',1,2,'Получить информацию о мат помощи');
+insert into TASKS_TABLE values(default,'2019-03-01','2019-05-12',5,2,'Создать веб-страницу');
+insert into TASKS_TABLE values(default,'2019-05-11','2019-05-11',5,3,'Сдать текст по английскому');
+insert into TASKS_TABLE values(default,'2019-03-10','2019-05-12',5,3,'Написать курсовую работу');
+
+--statements
+--ID  	CREATION_DATE  	HEADER  	NUMBER  	STATUS  	STUDENT_ID  	TEXT
+insert into STATEMENTS values (default, '2019-05-01', 'Заявление на матпомощь','226121',
+                               'На рассмотрении',1,'');
+insert into STATEMENTS values (default, '2018-04-11', 'Заявление на матпомощь','111021',
+                               'Выполнено',1,'');
+insert into STATEMENTS values (default, '2019-03-7', 'Заявление на получение справки','524166',
+                               'Получено',1,'');
+insert into STATEMENTS values (default, '2019-02-21', 'Заявление на смену элективного курса','271662',
+                               'Отклонено',1,'');
+insert into STATEMENTS values (default, '2018-11-11', 'Заявление на матпомощь','827122',
+                               'Выполнено',1,'');
+insert into STATEMENTS values (default, '2019-05-11', 'Заявление на матпомощь','992712',
+                               'На рассмотрении',2,'');
+insert into STATEMENTS values (default, '2018-06-7', 'Заявление на матпомощь','288712',
+                               'Выполнено',2,'');
+insert into STATEMENTS values (default, '2019-05-18', 'Заявление на смену образовательной программы','827162',
+                               'На рассмотрении',2,'');
+insert into STATEMENTS values (default, '2019-06-28', 'Заявление на справку о стипендии','228716',
+                               'Выполнено',2,'');
+insert into STATEMENTS values (default, '2019-07-21', 'Заявление на выселение','209817',
+                               'На рассмотрении',2,'');
+

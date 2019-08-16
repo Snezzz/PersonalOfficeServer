@@ -25,12 +25,14 @@ public class Student {
     Set<Fees> fees;
     @ManyToMany
     Set<Tasks> tasks;
+    @ManyToMany
+    Set<Statements> statements;
 
     Student() {
 
     }
 
-    public Student(String firstName, String sirName, String partonymic, String login, String password, String type, String course, String direction, String number, String snils, Set<Fees> fees, Set<Tasks> tasks) {
+    public Student(String firstName, String sirName, String partonymic, String login, String password, String type, String course, String direction, String number, String snils, Set<Fees> fees, Set<Tasks> tasks, Set<Statements> statements) {
         this.firstName = firstName;
         this.sirName = sirName;
         this.partonymic = partonymic;
@@ -43,6 +45,15 @@ public class Student {
         this.snils = snils;
         this.fees = fees;
         this.tasks = tasks;
+        this.statements = statements;
+    }
+
+    public Set<Statements> getStatements() {
+        return statements;
+    }
+
+    public void setStatements(Set<Statements> statements) {
+        this.statements = statements;
     }
 
     public int getId() {

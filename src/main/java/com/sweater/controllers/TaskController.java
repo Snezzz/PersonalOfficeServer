@@ -31,9 +31,10 @@ public class TaskController {
 
     //delete by date
     @CrossOrigin(origins = "http://localhost:3000")
-    @DeleteMapping("/task/{date}")
-    public void deleteTaskByDate(@PathVariable Date date) {
-        taskService.deleteTaskByDate(date);
+    @DeleteMapping("/task")
+    public void deleteTaskByDate(@RequestBody String id )
+    {
+        taskService.deleteTaskById(Integer.valueOf(id));
     }
 
 
