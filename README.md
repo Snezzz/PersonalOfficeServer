@@ -4,7 +4,7 @@
 **Framework**: Spring Boot  MVC  
 **DB**: H2  
 **Port**: http://localhost:8080/  
-**Tables**: Fees, Student, Tasks
+**Tables**: Fees, Student, Tasks, Statements, Directions
 
 **Подключение к консоли БД:**  
 http://localhost:8080/h2-console  
