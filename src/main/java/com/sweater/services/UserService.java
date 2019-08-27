@@ -26,7 +26,7 @@ public class UserService {
     public void deleteById(int id){
         userRepository.deleteById(id);
     }
-    public Student getUserByLogin(String login){
+    public Student getStudentByLogin(String login){
         return userRepository.findByLogin(login);
     }
     public Student getUserById(Integer id){

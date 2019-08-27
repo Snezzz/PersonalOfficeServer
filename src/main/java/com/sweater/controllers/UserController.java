@@ -19,8 +19,11 @@ public class UserController {
     //get
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/login/{login}")
-    public Student getUser(@PathVariable("login")String login) {
-        return userService.getUserByLogin(login);
+    public Object getUser(@PathVariable("login")String login) {
+        Student st = userService.getStudentByLogin(login);
+        if(st!=null)
+        return userService.getStudentByLogin(login);
+        else return null;
     }
 
     //get by id
